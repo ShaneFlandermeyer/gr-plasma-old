@@ -1,9 +1,9 @@
 id: plasma_linear_fm_waveform
-label: Linear FM Waveform
+label: linear_fm_waveform
 category: '[plasma]'
 
 templates:
-  imports: import plasma
+  imports: from gnuradio import plasma
   make: plasma.linear_fm_waveform(${bandwidth}, ${pulsewidth}, ${prf}, ${samp_rate})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
@@ -24,21 +24,24 @@ parameters:
 - id: prf
   label: PRF
   dtype: float
-  default: 1e3
+  default: 1e6
 - id: samp_rate
   label: Sample Rate
   dtype: float
   default: 1e6
+#- id: ...
+#  label: ...
+#  dtype: ...
 
-# #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
-# #  Keys include:
-# #      * label (an identifier for the GUI)
-# #      * domain (optional - stream or message. Default is stream)
-# #      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
-# #      * vlen (optional - data stream vector length. Default is 1)
-# #      * optional (optional - set to 1 for optional inputs. Default is 0)
+#  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
+#  Keys include:
+#      * label (an identifier for the GUI)
+#      * domain (optional - stream or message. Default is stream)
+#      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#      * vlen (optional - data stream vector length. Default is 1)
+#      * optional (optional - set to 1 for optional inputs. Default is 0)
 # inputs:
-# - label: ...
+#- label: ...
 #  domain: ...
 #  dtype: ...
 #  vlen: ...

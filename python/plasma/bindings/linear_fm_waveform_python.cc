@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(linear_fm_waveform.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(59bc0d58b36b13c76ec83691275a6774)                     */
+/* BINDTOOL_HEADER_FILE_HASH(a05fb1b8e1b220703f67f0ed4490dc27)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -23,7 +23,7 @@
 
 namespace py = pybind11;
 
-#include <plasma/linear_fm_waveform.h>
+#include <gnuradio/plasma/linear_fm_waveform.h>
 // pydoc.h is automatically generated in the build directory
 #include <linear_fm_waveform_pydoc.h>
 
@@ -33,14 +33,10 @@ void bind_linear_fm_waveform(py::module& m)
     using linear_fm_waveform    = gr::plasma::linear_fm_waveform;
 
 
-    py::class_<linear_fm_waveform,
+    py::class_<linear_fm_waveform, gr::sync_block, gr::block, gr::basic_block,
         std::shared_ptr<linear_fm_waveform>>(m, "linear_fm_waveform", D(linear_fm_waveform))
 
         .def(py::init(&linear_fm_waveform::make),
-           py::arg("bandwidth"),
-           py::arg("pulsewidth"),
-           py::arg("prf"),
-           py::arg("samp_rate"),
            D(linear_fm_waveform,make)
         )
         
