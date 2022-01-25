@@ -1,5 +1,5 @@
 id: plasma_linear_fm_waveform
-label: linear_fm_waveform
+label: Linear FM Waveform
 category: '[plasma]'
 
 templates:
@@ -16,7 +16,7 @@ parameters:
 - id: bandwidth
   label: Bandwidth
   dtype: float
-  default: 1e6
+  default: 1e3
 - id: pulsewidth
   label: Pulsewidth
   dtype: float
@@ -28,10 +28,6 @@ parameters:
 - id: samp_rate
   label: Sample Rate
   dtype: float
-  default: 1e6
-#- id: ...
-#  label: ...
-#  dtype: ...
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
