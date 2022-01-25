@@ -29,7 +29,7 @@ include(GrPybind)
 ########################################################################
 
 list(APPEND plasma_python_files
-    python_bindings.cc)
+    linear_fm_waveform_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(plasma 
    ../..

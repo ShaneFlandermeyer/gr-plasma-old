@@ -12,6 +12,7 @@
 include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND plasma_sources
+    linear_fm_waveform_impl.cc
 )
 
 set(plasma_sources "${plasma_sources}" PARENT_SCOPE)
@@ -22,6 +23,7 @@ endif(NOT plasma_sources)
 
 add_library(gnuradio-plasma SHARED ${plasma_sources})
 target_link_libraries(gnuradio-plasma gnuradio::gnuradio-runtime)
+target_link_libraries(gnuradio-plasma plasma-dsp)
 target_include_directories(gnuradio-plasma
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
     PUBLIC $<INSTALL_INTERFACE:include>
@@ -55,6 +57,7 @@ include(GrTest)
 #include_directories()
 # List all files that contain Boost.UTF unit tests here
 list(APPEND test_plasma_sources
+qa_linear_fm_waveform.cc
 )
 # Anything we need to link to for the unit tests go here
 list(APPEND GR_TEST_TARGET_DEPS gnuradio-plasma)

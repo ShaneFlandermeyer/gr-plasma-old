@@ -11,5 +11,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/plasma
+    linear_fm_waveform.h DESTINATION include/plasma
 )
