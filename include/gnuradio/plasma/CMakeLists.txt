@@ -11,5 +11,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/gnuradio/plasma
+    linear_fm_waveform.h DESTINATION include/gnuradio/plasma
 )
