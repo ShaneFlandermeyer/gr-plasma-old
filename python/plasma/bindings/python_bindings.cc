@@ -22,6 +22,7 @@ namespace py = pybind11;
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
     void bind_linear_fm_waveform(py::module& m);
+    void bind_pdu_to_stream_repeat(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -51,5 +52,6 @@ PYBIND11_MODULE(plasma_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_linear_fm_waveform(m);
+    bind_pdu_to_stream_repeat(m);
     // ) END BINDING_FUNCTION_CALLS
 }

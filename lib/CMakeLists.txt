@@ -13,6 +13,7 @@ include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND plasma_sources
     linear_fm_waveform_impl.cc
+    pdu_to_stream_repeat_impl.cc
 )
 
 set(plasma_sources "${plasma_sources}" PARENT_SCOPE)
@@ -57,6 +58,7 @@ include(GrTest)
 #include_directories()
 # List all files that contain Boost.UTF unit tests here
 list(APPEND test_plasma_sources
+qa_pdu_to_stream_repeat.cc
 qa_linear_fm_waveform.cc
 )
 # Anything we need to link to for the unit tests go here
