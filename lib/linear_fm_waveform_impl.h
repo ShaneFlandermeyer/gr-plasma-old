@@ -29,6 +29,7 @@ private:
     // Thread members for start() and stop()
     std::atomic<bool> d_finished;
     gr::thread::thread d_thread;
+    double d_time;
 
     void send();
 

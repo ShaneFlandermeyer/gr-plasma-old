@@ -37,7 +37,7 @@ linear_fm_waveform_impl::linear_fm_waveform_impl(double bandwidth,
       d_samp_rate(samp_rate)
 {
     ::plasma::LinearFMWaveform waveform(bandwidth, pulsewidth, prf, samp_rate);
-    Eigen::ArrayXcf data = waveform.pulse().cast<gr_complex>();
+    Eigen::ArrayXcf data = waveform.waveform().cast<gr_complex>();
     d_data = pmt::init_c32vector(data.size(), data.data());
     message_port_register_out(pmt::mp("out"));
 }
@@ -67,16 +67,25 @@ bool linear_fm_waveform_impl::stop()
 void linear_fm_waveform_impl::send()
 {
     // Create the PDU
-    pmt::pmt_t pdu(pmt::cons(pmt::PMT_NIL, d_data));
-
+    // TODO: Implement time tags
+    // TODO: Add some way to slow down if the PDU->stream queue fills up
+    // I think it may be best to write a special block for this that takes a
+    // single waveform pdu and sends it continuously, rather than sending a new
+    // PDU every PRI. That way, we only have to send a PDU if the waveform
+    // changes. We might still be in trouble if pulse-to-pulse adaptation is
+    // ever required, but it's a start!
+    double whole, frac;
+    pmt::pmt_t meta = pmt::make_dict();
+    pmt::pmt_t time;
     // Send a message every 100 ms until the program is finished
     while (!d_finished) {
+        message_port_pub(pmt::mp("out"), pmt::cons(pmt::PMT_NIL, d_data));
+        d_time += 1 / d_prf;
         boost::this_thread::sleep(
-            boost::posix_time::milliseconds(static_cast<long>(1 / d_prf * 1e3)));
+            boost::posix_time::seconds(static_cast<long>(1 / d_prf)));
         if (d_finished) {
             return;
         }
-        message_port_pub(pmt::mp("out"), pdu);
     }
 }
 
