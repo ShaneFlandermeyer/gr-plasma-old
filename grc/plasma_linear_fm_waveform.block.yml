@@ -1,6 +1,6 @@
 id: plasma_linear_fm_waveform
 label: linear_fm_waveform
-category: '[plasma]'
+category: "[plasma]"
 
 templates:
   imports: from gnuradio import plasma
@@ -13,22 +13,22 @@ templates:
 #     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #     * default
 parameters:
-- id: bandwidth
-  label: Bandwidth
-  dtype: float
-  default: 1e3
-- id: pulsewidth
-  label: Pulsewidth
-  dtype: float
-  default: 100e-6
-- id: prf
-  label: PRF
-  dtype: float
-  default: 1e3
-- id: samp_rate
-  label: Sample Rate
-  dtype: float
-  default: 1e6
+  - id: bandwidth
+    label: Bandwidth
+    dtype: float
+    default: 1e6
+  - id: pulsewidth
+    label: Pulsewidth
+    dtype: float
+    default: 100e-6
+  - id: prf
+    label: PRF
+    dtype: float
+    default: 1e3
+  - id: samp_rate
+    label: Sample Rate
+    dtype: float
+    default: 1e6
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
@@ -45,13 +45,12 @@ parameters:
 #  optional: ...
 
 outputs:
-- id: out
-  label: out
-  domain: message
+  - id: out
+    label: out
+    domain: message
 #   dtype: complex
 #   vlen: 1
 #   optional: 0
-
 
 #  'file_format' specifies the version of the GRC yml format used in the file
 #  and should usually not be changed.
