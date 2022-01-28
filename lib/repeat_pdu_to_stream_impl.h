@@ -18,6 +18,8 @@ namespace gr {
      private:
       // Nothing to declare in this block.
       size_t d_num_reps;
+      size_t d_curr_index;
+      std::vector<gr_complex> d_data;
 
      public:
       repeat_pdu_to_stream_impl(size_t num_repetitions);
@@ -30,7 +32,7 @@ namespace gr {
               gr_vector_void_star &output_items
       );
 
-      void handle_msg(const pmt::pmt_t &pdu);
+      void store_pdu(const pmt::pmt_t &pdu);
     };
 
   } // namespace plasma

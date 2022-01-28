@@ -37,7 +37,7 @@ linear_fm_waveform_impl::linear_fm_waveform_impl(double bandwidth,
       d_samp_rate(samp_rate)
 {
     ::plasma::LinearFMWaveform waveform(bandwidth, pulsewidth, prf, samp_rate);
-    Eigen::ArrayXcf data = waveform.waveform().cast<gr_complex>();
+    Eigen::ArrayXcf data = waveform.pulse().cast<gr_complex>();
     d_data = pmt::init_c32vector(data.size(), data.data());
     message_port_register_out(pmt::mp("out"));
 }
