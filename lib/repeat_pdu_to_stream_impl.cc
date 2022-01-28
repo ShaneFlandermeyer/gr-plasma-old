@@ -12,7 +12,7 @@ namespace gr {
   namespace plasma {
 
     #pragma message("set the following appropriately and remove this warning")
-    using input_type = float;
+    using output_type = gr_complex;
     repeat_pdu_to_stream::sptr
     repeat_pdu_to_stream::make(size_t num_repetitions)
     {
@@ -26,9 +26,11 @@ namespace gr {
      */
     repeat_pdu_to_stream_impl::repeat_pdu_to_stream_impl(size_t num_repetitions)
       : gr::sync_block("repeat_pdu_to_stream",
-              gr::io_signature::make(1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
-              gr::io_signature::make(0, 0, 0))
-    {}
+              gr::io_signature::make(0, 0, 0),
+              gr::io_signature::make(1 /* min outputs */, 1 /*max outputs */, sizeof(output_type)))
+    {
+      this->message_port_register_in(pmt::mp("in"));
+    }
 
     /*
      * Our virtual destructor.
@@ -42,7 +44,7 @@ namespace gr {
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
-      auto in = static_cast<const input_type*>(input_items[0]);
+      auto out = static_cast<output_type*>(output_items[0]);
 
       #pragma message("Implement the signal processing in your block and remove this warning")
       // Do <+signal processing+>
