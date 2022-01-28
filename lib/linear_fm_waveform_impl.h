@@ -9,7 +9,7 @@
 #define INCLUDED_PLASMA_LINEAR_FM_WAVEFORM_IMPL_H
 
 #include <gnuradio/plasma/linear_fm_waveform.h>
-#include <plasma-dsp/linear-fm-waveform.h>
+#include <plasma-dsp/linear_fm_waveform.h>
 
 namespace gr {
 namespace plasma {
