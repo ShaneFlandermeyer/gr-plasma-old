@@ -7,5 +7,5 @@
 #
 install(FILES
     plasma_linear_fm_waveform.block.yml
-    DESTINATION share/gnuradio/grc/blocks
+    plasma_repeat_pdu_to_stream.block.yml DESTINATION share/gnuradio/grc/blocks
 )
