@@ -10,11 +10,9 @@
 # Setup library
 ########################################################################
 include(GrPlatform) #define LIB_SUFFIX
-
 list(APPEND plasma_sources
     linear_fm_waveform_impl.cc
-    pdu_to_stream_repeat_impl.cc
-)
+    )
 
 set(plasma_sources "${plasma_sources}" PARENT_SCOPE)
 if(NOT plasma_sources)

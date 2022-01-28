@@ -12,5 +12,5 @@
 install(FILES
     api.h
     linear_fm_waveform.h
-    pdu_to_stream_repeat.h DESTINATION include/gnuradio/plasma
+    DESTINATION include/gnuradio/plasma
 )
