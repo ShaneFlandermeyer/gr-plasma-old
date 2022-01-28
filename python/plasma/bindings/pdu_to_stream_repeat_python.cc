@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(pdu_to_stream_repeat.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(596049e3c0ca0fd4550f6ca3158c1ba0)                     */
+/* BINDTOOL_HEADER_FILE_HASH(212daee3413dcaa65ff7d2afbbd4cd41)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,10 +30,10 @@ namespace py = pybind11;
 void bind_pdu_to_stream_repeat(py::module& m)
 {
 
-    using pdu_to_stream_repeat    = gr::plasma::pdu_to_stream_repeat;
+    using pdu_to_stream_repeat    = ::gr::plasma::pdu_to_stream_repeat;
 
 
-    py::class_<pdu_to_stream_repeat,
+    py::class_<pdu_to_stream_repeat, gr::sync_block, gr::block, gr::basic_block,
         std::shared_ptr<pdu_to_stream_repeat>>(m, "pdu_to_stream_repeat", D(pdu_to_stream_repeat))
 
         .def(py::init(&pdu_to_stream_repeat::make),

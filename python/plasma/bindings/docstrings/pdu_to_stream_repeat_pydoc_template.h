@@ -19,6 +19,9 @@
  static const char *__doc_gr_plasma_pdu_to_stream_repeat = R"doc()doc";
 
 
+ static const char *__doc_gr_plasma_pdu_to_stream_repeat_pdu_to_stream_repeat = R"doc()doc";
+
+
  static const char *__doc_gr_plasma_pdu_to_stream_repeat_make = R"doc()doc";
 
   
