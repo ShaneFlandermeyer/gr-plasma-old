@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-
 install(FILES
-    DESTINATION share/gnuradio/grc/blocks
+    plasma_linear_fm_waveform.block.yml
+    plasma_repeat_pdu_to_stream.block.yml DESTINATION share/gnuradio/grc/blocks
 )
