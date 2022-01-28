@@ -17,6 +17,7 @@ namespace gr {
     {
      private:
       // Nothing to declare in this block.
+      size_t d_num_reps;
 
      public:
       repeat_pdu_to_stream_impl(size_t num_repetitions);
@@ -28,6 +29,8 @@ namespace gr {
               gr_vector_const_void_star &input_items,
               gr_vector_void_star &output_items
       );
+
+      void handle_msg(const pmt::pmt_t &pdu);
     };
 
   } // namespace plasma
