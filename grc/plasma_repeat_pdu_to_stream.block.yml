@@ -1,6 +1,8 @@
 id: plasma_repeat_pdu_to_stream
 label: Repeat PDU to Stream
 category: '[plasma]'
+flags: [ python, cpp ]
+
 
 templates:
   imports: from gnuradio import plasma
