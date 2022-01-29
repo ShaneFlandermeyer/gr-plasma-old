@@ -13,7 +13,7 @@ namespace plasma {
 
 linear_fm_waveform::sptr linear_fm_waveform::make(double bandwidth,
                                                   double pulsewidth,
-                                                  double prf,
+                                                  std::vector<double> prf,
                                                   double samp_rate)
 {
     return gnuradio::make_block_sptr<linear_fm_waveform_impl>(
@@ -26,7 +26,7 @@ linear_fm_waveform::sptr linear_fm_waveform::make(double bandwidth,
  */
 linear_fm_waveform_impl::linear_fm_waveform_impl(double bandwidth,
                                                  double pulsewidth,
-                                                 double prf,
+                                                 std::vector<double> prf,
                                                  double samp_rate)
     : gr::block("linear_fm_waveform",
                 gr::io_signature::make(0 /* min inputs */, 0 /* max inputs */, 0),
@@ -36,8 +36,9 @@ linear_fm_waveform_impl::linear_fm_waveform_impl(double bandwidth,
       d_prf(prf),
       d_samp_rate(samp_rate)
 {
-    ::plasma::LinearFMWaveform waveform(bandwidth, pulsewidth, prf, samp_rate);
-    Eigen::ArrayXcf data = waveform.pulse().cast<gr_complex>();
+
+    d_waveform = ::plasma::LinearFMWaveform(bandwidth, pulsewidth, prf, samp_rate);
+    Eigen::ArrayXcd data = d_waveform.pulse().cast<gr_complex>();
     d_data = pmt::init_c32vector(data.size(), data.data());
     message_port_register_out(pmt::mp("out"));
 }
@@ -70,7 +71,7 @@ void linear_fm_waveform_impl::send()
     pmt::pmt_t meta = pmt::make_dict();
     meta = pmt::dict_add(meta, pmt::mp("bandwidth"), pmt::from_double(d_bandwidth));
     meta = pmt::dict_add(meta, pmt::mp("pulsewidth"), pmt::from_double(d_pulsewidth));
-    meta = pmt::dict_add(meta, pmt::mp("prf"), pmt::from_double(d_prf));
+    // meta = pmt::dict_add(meta, pmt::mp("prf"), pmt::from_double(d_prf));
     meta = pmt::dict_add(meta, pmt::mp("samp_rate"), pmt::from_double(d_samp_rate));
     message_port_pub(pmt::mp("out"), pmt::cons(meta, d_data));
 }

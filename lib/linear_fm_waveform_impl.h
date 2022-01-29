@@ -17,26 +17,29 @@ namespace plasma {
 class linear_fm_waveform_impl : public linear_fm_waveform
 {
 private:
-    // Waveform parameters
-    // TODO: Can't make this a member until I fix the waveform's default ctr.
-    // ::plasma::LinearFMWaveform d_waveform;
-    double d_bandwidth;
-    double d_pulsewidth;
-    double d_prf;
-    double d_samp_rate;
-    // Transmitted data vector
-    pmt::pmt_t d_data;
+    
     // Thread members for start() and stop()
     std::atomic<bool> d_finished;
     gr::thread::thread d_thread;
+    // Waveform parameters
+    double d_bandwidth;
+    double d_pulsewidth;
+    std::vector<double> d_prf;
+    double d_samp_rate;
     double d_time;
-
+    // Waveform object
+    ::plasma::LinearFMWaveform d_waveform;
+    // Transmitted data vector
+    pmt::pmt_t d_data;
+    
+    
+    
     void send();
 
 public:
     linear_fm_waveform_impl(double bandwidth,
                             double pulsewidth,
-                            double prf,
+                            std::vector<double> prf,
                             double samp_rate);
     ~linear_fm_waveform_impl();
     bool start() override;

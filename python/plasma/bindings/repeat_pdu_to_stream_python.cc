@@ -30,30 +30,23 @@ namespace py = pybind11;
 void bind_repeat_pdu_to_stream(py::module& m)
 {
 
-    using repeat_pdu_to_stream    = gr::plasma::repeat_pdu_to_stream;
+    using repeat_pdu_to_stream = gr::plasma::repeat_pdu_to_stream;
 
 
-    py::class_<repeat_pdu_to_stream, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<repeat_pdu_to_stream>>(m, "repeat_pdu_to_stream", D(repeat_pdu_to_stream))
+    py::class_<repeat_pdu_to_stream,
+              gr::sync_block,
+              gr::block,
+              gr::basic_block,
+              std::shared_ptr<repeat_pdu_to_stream>>(m, "repeat_pdu_to_stream", D(repeat_pdu_to_stream))
+    // py::class_<repeat_pdu_to_stream,
+    //            gr::sync_block,
+    //            gr::block,
+    //            gr::basic_block,
+    //            std::shared_ptr<repeat_pdu_to_stream>>(
+    //     m, "repeat_pdu_to_stream", D(repeat_pdu_to_stream))
 
-        .def(py::init(&repeat_pdu_to_stream::make),
-           D(repeat_pdu_to_stream,make)
-        )
-        
-
+        .def(py::init(&repeat_pdu_to_stream::make), D(repeat_pdu_to_stream, make))
 
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-

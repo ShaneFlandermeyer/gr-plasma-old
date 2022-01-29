@@ -19,9 +19,6 @@
  static const char *__doc_gr_plasma_linear_fm_waveform = R"doc()doc";
 
 
- static const char *__doc_gr_plasma_linear_fm_waveform_linear_fm_waveform = R"doc()doc";
-
-
  static const char *__doc_gr_plasma_linear_fm_waveform_make = R"doc()doc";
 
   
