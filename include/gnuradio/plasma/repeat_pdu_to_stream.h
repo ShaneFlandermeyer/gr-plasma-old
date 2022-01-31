@@ -12,30 +12,30 @@
 #include <gnuradio/sync_block.h>
 
 namespace gr {
-  namespace plasma {
+namespace plasma {
+
+/*!
+ * \brief <+description of block+>
+ * \ingroup plasma
+ *
+ */
+class PLASMA_API repeat_pdu_to_stream : virtual public gr::sync_block
+{
+public:
+    typedef std::shared_ptr<repeat_pdu_to_stream> sptr;
 
     /*!
-     * \brief <+description of block+>
-     * \ingroup plasma
+     * \brief Return a shared_ptr to a new instance of plasma::repeat_pdu_to_stream.
      *
+     * To avoid accidental use of raw pointers, plasma::repeat_pdu_to_stream's
+     * constructor is in a private implementation
+     * class. plasma::repeat_pdu_to_stream::make is the public interface for
+     * creating new instances.
      */
-    class PLASMA_API repeat_pdu_to_stream : virtual public gr::sync_block
-    {
-     public:
-      typedef std::shared_ptr<repeat_pdu_to_stream> sptr;
+    static sptr make();
+};
 
-      /*!
-       * \brief Return a shared_ptr to a new instance of plasma::repeat_pdu_to_stream.
-       *
-       * To avoid accidental use of raw pointers, plasma::repeat_pdu_to_stream's
-       * constructor is in a private implementation
-       * class. plasma::repeat_pdu_to_stream::make is the public interface for
-       * creating new instances.
-       */
-      static sptr make(size_t num_repetitions);
-    };
-
-  } // namespace plasma
+} // namespace plasma
 } // namespace gr
 
 #endif /* INCLUDED_PLASMA_REPEAT_PDU_TO_STREAM_H */

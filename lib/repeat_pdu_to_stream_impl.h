@@ -17,14 +17,13 @@ class repeat_pdu_to_stream_impl : public repeat_pdu_to_stream
 {
 private:
     // Nothing to declare in this block.
-    size_t d_num_reps;
     size_t d_curr_index;
     bool d_has_pdu;
     std::vector<gr_complex> d_data;
     pmt::pmt_t d_pdu;
 
 public:
-    repeat_pdu_to_stream_impl(size_t num_repetitions);
+    repeat_pdu_to_stream_impl();
     ~repeat_pdu_to_stream_impl();
 
     // Where all the action really happens
@@ -42,8 +41,8 @@ public:
 
     /**
      * @brief Store the PDU data in the data class member
-     * 
-     * @param pdu 
+     *
+     * @param pdu
      */
     void store_pdu(const pmt::pmt_t& pdu);
 };

@@ -12,21 +12,20 @@ namespace gr {
 namespace plasma {
 
 using output_type = gr_complex;
-repeat_pdu_to_stream::sptr repeat_pdu_to_stream::make(size_t num_repetitions)
+repeat_pdu_to_stream::sptr repeat_pdu_to_stream::make()
 {
-    return gnuradio::make_block_sptr<repeat_pdu_to_stream_impl>(num_repetitions);
+    return gnuradio::make_block_sptr<repeat_pdu_to_stream_impl>();
 }
 
 
 /*
  * The private constructor
  */
-repeat_pdu_to_stream_impl::repeat_pdu_to_stream_impl(size_t num_repetitions)
+repeat_pdu_to_stream_impl::repeat_pdu_to_stream_impl()
     : gr::sync_block("repeat_pdu_to_stream",
                      gr::io_signature::make(0, 0, 0),
                      gr::io_signature::make(
                          1 /* min outputs */, 1 /*max outputs */, sizeof(output_type))),
-      d_num_reps(num_repetitions),
       d_curr_index(0)
 {
     this->message_port_register_in(pmt::mp("in"));

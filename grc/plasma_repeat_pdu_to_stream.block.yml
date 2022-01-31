@@ -6,7 +6,7 @@ flags: [ python, cpp ]
 
 templates:
   imports: from gnuradio import plasma
-  make: plasma.repeat_pdu_to_stream(${num_repetitions})
+  make: plasma.repeat_pdu_to_stream()
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
@@ -14,11 +14,11 @@ templates:
 #     * label (label shown in the GUI)
 #     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
 #     * default
-parameters:
-- id: num_repetitions
-  label: Number of Repetitions
-  dtype: int
-  default: 1
+# parameters:
+# - id: num_repetitions
+#   label: Number of Repetitions
+#   dtype: int
+#   default: 1
 
 #  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
 #  Keys include:
