@@ -1,0 +1,68 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"GR_PYTHON_INSTALL"
+		],
+		"files" : 
+		[
+			"/usr/local/lib/cmake/gnuradio/GrPython.cmake",
+			"python/plasma/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 251,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.8/dist-packages/gnuradio/plasma",
+			"paths" : 
+			[
+				"python/plasma/__init__.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/python3.8/dist-packages/gnuradio/plasma",
+			"paths" : 
+			[
+				"build/python/plasma/__init__.pyc",
+				"build/python/plasma/__init__.pyo"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "python/plasma",
+		"source" : "python/plasma"
+	}
+}

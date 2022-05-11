@@ -1,0 +1,224 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						6,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-06929d332ed80eb84d7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "include/gnuradio/plasma",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-include.gnuradio.plasma-Debug-31ad15156dd2542109e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include/gnuradio/plasma"
+				},
+				{
+					"build" : "lib",
+					"jsonFile" : "directory-lib-Debug-c12f15c6f888b43a891c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib"
+				},
+				{
+					"build" : "apps",
+					"jsonFile" : "directory-apps-Debug-76fddd1453400e648719.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "docs",
+					"childIndexes" : 
+					[
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-docs-Debug-c463161ff6ebad611835.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "docs"
+				},
+				{
+					"build" : "docs/doxygen",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-docs.doxygen-Debug-64a5a3fc0bbca6b433b4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "docs/doxygen",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "python/plasma",
+					"childIndexes" : 
+					[
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-python.plasma-Debug-f7d93a618e4b5510dac2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "python/plasma",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"build" : "python/plasma/bindings",
+					"jsonFile" : "directory-python.plasma.bindings-Debug-fadd6fb78c6795273f81.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "python/plasma/bindings"
+				},
+				{
+					"build" : "grc",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-grc-Debug-c4dd92a8e6fed8b5f056.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "grc"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "gr-plasma",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "copy_module_for_tests::@852aae41725c8e6fd213",
+					"jsonFile" : "target-copy_module_for_tests-Debug-f222b2596f570a841aa2.json",
+					"name" : "copy_module_for_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "doxygen_target::@0eb31cab11dfcb11fc01",
+					"jsonFile" : "target-doxygen_target-Debug-681ec95dec5e371c38bd.json",
+					"name" : "doxygen_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "pygen_apps_9a6dd::@9e189ee61a034fc9b705",
+					"jsonFile" : "target-pygen_apps_9a6dd-Debug-dfd5089bd34d602e5ce3.json",
+					"name" : "pygen_apps_9a6dd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "pygen_python_plasma_70488::@852aae41725c8e6fd213",
+					"jsonFile" : "target-pygen_python_plasma_70488-Debug-7c040d08db2b1235bb3f.json",
+					"name" : "pygen_python_plasma_70488",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-6be3bbf1399e7eefb19a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/shane/src/oot-modules/gr-plasma/build",
+		"source" : "/home/shane/src/oot-modules/gr-plasma"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

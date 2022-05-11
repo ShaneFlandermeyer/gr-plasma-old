@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/shane/src/oot-modules/gr-plasma/build/lib",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -Dgnuradio_plasma_EXPORTS -I/home/shane/src/oot-modules/gr-plasma/lib/../include -isystem /usr/include/python3.8  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -g -O2 -fPIC -std=c++17 -o CMakeFiles/gnuradio-plasma.dir/plasma_test_impl.cc.o -c /home/shane/src/oot-modules/gr-plasma/lib/plasma_test_impl.cc",
+  "file": "/home/shane/src/oot-modules/gr-plasma/lib/plasma_test_impl.cc"
+},
+{
+  "directory": "/home/shane/src/oot-modules/gr-plasma/build/python/plasma/bindings",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_DATE_TIME_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -Dplasma_python_EXPORTS -I/home/shane/src/oot-modules/gr-plasma/build/python/plasma/bindings -I/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/../../../lib -I/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/../../../include -I/home/shane/src/oot-modules/gr-plasma/lib/../include -isystem /usr/include/python3.8 -isystem /home/shane/.local/lib/python3.8/site-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -g -O2 -fPIC -fvisibility=hidden -Wno-unused-variable -std=c++17 -o CMakeFiles/plasma_python.dir/plasma_test_python.cc.o -c /home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/plasma_test_python.cc",
+  "file": "/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/plasma_test_python.cc"
+},
+{
+  "directory": "/home/shane/src/oot-modules/gr-plasma/build/python/plasma/bindings",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_DATE_TIME_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DGR_MPLIB_GMP -DGR_PERFORMANCE_COUNTERS -DSPDLOG_COMPILED_LIB -Dplasma_python_EXPORTS -I/home/shane/src/oot-modules/gr-plasma/build/python/plasma/bindings -I/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/../../../lib -I/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/../../../include -I/home/shane/src/oot-modules/gr-plasma/lib/../include -isystem /usr/include/python3.8 -isystem /home/shane/.local/lib/python3.8/site-packages/numpy/core/include  -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -g -O2 -fPIC -fvisibility=hidden -Wno-unused-variable -std=c++17 -o CMakeFiles/plasma_python.dir/python_bindings.cc.o -c /home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/python_bindings.cc",
+  "file": "/home/shane/src/oot-modules/gr-plasma/python/plasma/bindings/python_bindings.cc"
+}
+]
